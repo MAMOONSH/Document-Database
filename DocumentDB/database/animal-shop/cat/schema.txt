@@ -1,0 +1,1 @@
+{"additionalProperties":false,"title":"cat","type":"object","properties":{"furLevel":{"type":"string"},"color":{"type":"string"},"gender":{"type":"string"},"price":{"type":"number"}}}

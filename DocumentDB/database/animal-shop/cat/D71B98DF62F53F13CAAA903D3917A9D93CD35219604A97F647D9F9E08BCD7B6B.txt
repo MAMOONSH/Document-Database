@@ -1,0 +1,1 @@
+{"furLevel":"thick","_id":"D71B98DF62F53F13CAAA903D3917A9D93CD35219604A97F647D9F9E08BCD7B6B","color":"blue","gender":"male","price":40}

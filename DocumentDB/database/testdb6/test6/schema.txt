@@ -1,0 +1,1 @@
+{"additionalProperties":false,"title":"test6","type":"object","properties":{"name":{"type":"string"},"hate":{"type":"string"},"family":{"type":"string"},"job":{"type":"string"},"age":{"type":"number"}}}

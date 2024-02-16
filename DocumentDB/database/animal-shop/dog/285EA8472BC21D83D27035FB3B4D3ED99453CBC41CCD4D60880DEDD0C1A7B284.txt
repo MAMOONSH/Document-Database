@@ -1,0 +1,1 @@
+{"_id":"285EA8472BC21D83D27035FB3B4D3ED99453CBC41CCD4D60880DEDD0C1A7B284","color":"blue","gender":"no gender","kind":"huski","price":4654}

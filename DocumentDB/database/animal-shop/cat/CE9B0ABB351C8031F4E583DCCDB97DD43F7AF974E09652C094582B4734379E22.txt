@@ -1,0 +1,1 @@
+{"furLevel":"no fur","_id":"CE9B0ABB351C8031F4E583DCCDB97DD43F7AF974E09652C094582B4734379E22","color":"no color","gender":"no gender","price":99999}
