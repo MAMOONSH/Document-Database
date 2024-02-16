@@ -1,0 +1,1 @@
+{"additionalProperties":false,"title":"test1","type":"object","properties":{"last name":{"type":"string"},"first name":{"type":"string"},"age":{"type":"number"}}}

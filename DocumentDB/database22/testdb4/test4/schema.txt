@@ -1,0 +1,1 @@
+{"additionalProperties":false,"title":"test4","type":"object","properties":{"name":{"type":"string"},"family":{"type":"string"},"job":{"type":"string"},"like":{"type":"string"},"age":{"type":"number"}}}
