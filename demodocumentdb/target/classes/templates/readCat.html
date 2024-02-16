@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>read cats</title>
+</head>
+<body>
+<label><a href="/home">home</a></label>
+<table class="table">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>cat fur Level</th>
+        <th> cat color</th>
+        <th>cat gender</th>
+        <th> cat price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cats.empty}">
+        <td colspan="2"> No cats Available</td>
+    </tr>
+    <tr th:each="cat : ${cats}">
+        <td><span th:text="${cat._id}">cat fur Level </span></td>
+        <td><span th:text="${cat.furLevel}">cat fur Level </span></td>
+        <td><span th:text="${cat.color}"> cat color </span></td>
+        <td><span th:text="${cat.gender}">cat gender </span></td>
+        <td><span th:text="${cat.price}"> cat price </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

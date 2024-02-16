@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>read dogs</title>
+</head>
+<body>
+<label><a href="/home">home</a></label>
+<table class="table">
+    <thead>
+    <tr>
+        <th>dog id</th>
+        <th>dog kind</th>
+        <th> dog color</th>
+        <th>dog gender</th>
+        <th> dog price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${dogs.empty}">
+        <td colspan="2"> No dogs Available</td>
+    </tr>
+    <tr th:each="dog : ${dogs}">
+        <td><span th:text="${dog._id}">dog id </span></td>
+        <td><span th:text="${dog.kind}">dog kind </span></td>
+        <td><span th:text="${dog.color}"> dog color </span></td>
+        <td><span th:text="${dog.gender}">dog gender </span></td>
+        <td><span th:text="${dog.price}"> dog price </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
