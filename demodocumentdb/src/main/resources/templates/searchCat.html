@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>search Cat</title>
+</head>
+<body>
+<label><a href="/home">home</a></label>
+<div class="container"><br>
+    <form method="post" th:action="@{/searchCat}">
+        furLevel:<br><input class="form-control" name="furLevel" type="text"></input><br>
+        color:<br><input class="form-control" name="color" type="text"></input><br>
+        gender:<br><input class="form-control" name="gender" type="text"></input><br>
+        price:<br><input class="form-control" name="price" type="text"></input><br><br>
+        <p><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+    </form>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>cat fur Level</th>
+            <th> cat color</th>
+            <th>cat gender</th>
+            <th> cat price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${cats.empty}">
+            <td colspan="2"> No cats Available</td>
+        </tr>
+        <tr th:each="cat : ${cats}">
+            <td><span th:text="${cat._id}">cat fur Level </span></td>
+            <td><span th:text="${cat.furLevel}">cat fur Level </span></td>
+            <td><span th:text="${cat.color}"> cat color </span></td>
+            <td><span th:text="${cat.gender}">cat gender </span></td>
+            <td><span th:text="${cat.price}"> cat price </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

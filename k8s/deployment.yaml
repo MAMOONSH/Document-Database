@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test-database-k8s
+  name: test-database-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-database-k8s
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: test-database-k8s
+    spec:
+      containers:
+      - image: mamoonsh/document-db-docker:latest
+        name: document-db-docker
+        resources: {}
+        volumeMounts:
+        - name: dockersock
+          mountPath: "/var/run/docker.sock"
+        - name: database
+          mountPath: "./database"     
+      volumes:
+      - name: dockersock
+        hostPath:
+          path: /var/run/docker.sock 
+      - name: database
+        hostPath:
+          path: documentdb1
+
+

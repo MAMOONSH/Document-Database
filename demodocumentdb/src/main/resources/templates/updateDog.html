@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>Update Dog</title>
+</head>
+<body>
+<div class="container"><br>
+
+    <form method="post" th:action="@{/updateDog}">
+        <h1>Match Values</h1>
+        _id:<br><input class="form-control" name="_id" type="text"></input><br>
+        kind:<br><input class="form-control" name="kind" type="text"></input><br>
+        price:<br><input class="form-control" name="price" type="text"></input><br>
+        gender:<br><input class="form-control" name="gender" type="text"></input><br>
+        color:<br><input class="form-control" name="color" type="text"></input><br><br>
+        <h1>New Values</h1>
+        kind:<br><input class="form-control" name="newKind" type="text"></input><br>
+        price:<br><input class="form-control" name="newPrice" type="text"></input><br>
+        gender:<br><input class="form-control" name="newGender" type="text"></input><br>
+        color:<br><input class="form-control" name="newColor" type="text"></input><br><br>
+        <p><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+    </form>
+</div>
+</body>
+</html>

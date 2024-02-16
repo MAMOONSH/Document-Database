@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>search dog</title>
+</head>
+<body>
+<label><a href="/home">home</a></label>
+<div class="container"><br>
+
+    <form method="post" th:action="@{/searchDog}">
+        kind:<br><input class="form-control" name="kind" type="text"></input><br>
+        price:<br><input class="form-control" name="price" type="text"></input><br>
+        gender:<br><input class="form-control" name="gender" type="text"></input><br>
+        color:<br><input class="form-control" name="color" type="text"></input><br><br>
+        <p><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+    </form>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>dog id</th>
+            <th>dog kind</th>
+            <th> dog color</th>
+            <th>dog gender</th>
+            <th> dog price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${dogs.empty}">
+            <td colspan="2"> No dogs Available</td>
+        </tr>
+        <tr th:each="dog : ${dogs}">
+            <td><span th:text="${dog._id}">dog id </span></td>
+            <td><span th:text="${dog.kind}">dog kind </span></td>
+            <td><span th:text="${dog.color}"> dog color </span></td>
+            <td><span th:text="${dog.gender}">dog gender </span></td>
+            <td><span th:text="${dog.price}"> dog price </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

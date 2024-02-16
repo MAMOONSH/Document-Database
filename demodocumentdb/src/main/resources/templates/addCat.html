@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <title>add cat</title>
+</head>
+<body>
+<div class="container"><br>
+    <form action="#" method="post" th:action="@{/addCat}" th:object="${cat}">
+        <div class="form-group">
+            <p>fur level: <br><label>
+                <input class="form-control" required="required" th:field="*{furLevel}" type="text"/>
+            </label></p>
+
+            <p>color: <br><label>
+                <input class="form-control" required="required" th:field="*{color}" type="text"/>
+            </label></p>
+            <p>gender: <br><label>
+                <input class="form-control" required="required" th:field="*{gender}" type="text"/>
+            </label></p>
+            <p>price: <br><label>
+                <input class="form-control" required="required" th:field="*{price}" type="text"/>
+            </label></p>
+
+            <p><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+        </div>
+    </form>
+</div>
+</body>
+</html>

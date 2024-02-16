@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          media="screen"
+          rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+
+    <title>create collection</title>
+
+</head>
+<body>
+<div class="container"><br>
+    <label><a href="/home">home</a></label>
+<form action="#" method="post" th:action="@{/addCollection}">
+    create cat and dog collections<br>
+    this can be done first time the application run to create database<br>
+    <br><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+</form>
+<br>
+    <div class="form-group">
+<form action="#" method="post" th:action="@{/addNode}">
+    <h2>add nodes</h2><br>
+    faster reading but more time to update data, also need more ram
+    <p><br>collection:<br> <label>
+        <input type="radio" name="collectionName" value="dog">
+        <label>dog</label>
+        <br>
+        <input type="radio" name="collectionName" value="cat">
+        <label>cat</label>
+    </label></p>
+    number of new nodes:<br>
+    <input class="form-control" type="number" name="numberOfNewNodes"></input>
+    <br><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+</form>
+<form action="#" method="post" th:action="@{/deleteNode}">
+    <h2>delete nodes</h2><br>
+    <br>
+    making them zero, users cant read or search<br>
+    <p><br>collection:</br> <label>
+        <input type="radio" name="collectionName" value="dog">
+        <label>dog</label>
+        <br>
+        <input   type="radio" name="collectionName" value="cat">
+        <label>cat</label>
+    </label></p>
+    number of new nodes:<br><input class="form-control" type="number" name="numberOfDeleteNodes"></input>
+    <br><input class="btn btn-primary mb-2" type="submit" value="Submit"/></p>
+</form>
+        <br>
+        <form action="#" method="post" th:action="@{/downloadDatabase}">
+            <h1>download database</h1>
+            <br><input class="btn btn-primary mb-2" type="submit" value="Download"/></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

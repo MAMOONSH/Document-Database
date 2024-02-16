@@ -1,0 +1,4 @@
+kubectl port-forward svc/test-database-k8s 8080:80
+kubectl apply -f ./k8s
+kubectl get all
+kubectl delete deploy test-database-k8s
